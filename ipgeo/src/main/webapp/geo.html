@@ -2,31 +2,15 @@
 <html>
 <head>
     <title>Geocodificación inversa</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjwKLzkv4FpPUyxyeKutPdpwzGa45x3-s"></script>
-    <script>
-        function initMap() {
-            var geocoder = new google.maps.Geocoder();
-            var latlng = {lat: 19.4285, lng: -99.1277};
-            
-            geocoder.geocode({'location': latlng}, function(results, status) {
-                if (status === 'OK') {
-                    if (results[0]) {
-                        document.getElementById('direccion').innerHTML = results[0].formatted_address;
-                    } else {
-                        window.alert('No se encontraron resultados');
-                    }
-                } else {
-                    window.alert('Geocoder falló debido a: ' + status);
-                }
-            });
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="static/sheetstyles.css">
+	<script src="./static/map.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjwKLzkv4FpPUyxyeKutPdpwzGa45x3-s"></script> -->
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniMap"></script>
+
 </head>
 <body>
-    <h1>Dirección basada en coordenadas</h1>
-    <div id="direccion"></div>
-    <script>
-        initMap();
-    </script>
+    <h1>Dirección basada en coordenadas   x s s</h1>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniMap"></script>
 </body>
 </html>

@@ -5,16 +5,28 @@
             background-color: #f4f4f4;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        
+  
+        .container-top {
+		    width: 100%;
+		    background-color: #f0f0f0; /* Color de fondo para el contenedor principal */
+		    padding: 20px;
+		    box-sizing: border-box;
+		}
+		
+		.top-div {
+		    width: 50%; /* Divide el ancho del contenedor en dos partes iguales */
+		    float: left; /* Permite que los divs se sitúen uno al lado del otro */
+		    padding: 20px;
+		    box-sizing: border-box;
+		    background-color: #ffffff; /* Color de fondo para los divs */
+		    border: 1px solid #cccccc; /* Añade un borde para resaltar los divs */
+		    border-radius: 10px; /* Redondea las esquinas */
+		    margin: 0 10px 20px 0; /* Añade espacio entre los divs y el margen inferior para el contenedor */
+		}
+		        
+		 .top-div:last-child {
+		    margin-right: 0; /* Elimina el margen derecho del último div para que no haya espacios sobrantes */
+		}       
         
          form {
             display: flex;
@@ -41,7 +53,9 @@
             font-size: 16px;
             cursor: pointer;
         }
-
+		h2 {
+			color: #6A287E;
+		}
         table {
             width: 100%;
             border-collapse: collapse;
@@ -60,3 +74,44 @@
         tr:hover {
             background-color: #f5f5f5;
         }
+        
+    #map {
+		height: 200px;
+		width: 50%;
+		background: black;
+	
+		}  
+		
+	  #direccion {
+		height: 200px;
+		width: 40%;
+		background: #6A287E;
+	
+		}  	 
+		
+	/* Horizontal */
+	  .container-hor {
+		    display: flex;
+			  justify-content: space-between;
+			  align-items: center;
+			  background-color: #f0f0f0;
+			  padding: 10px;
+		}
+		
+	 .box-hor {
+		  padding: 10px 20px;
+		  background-color: #3498db;
+		  color: white;
+		  border-radius: 5px;
+		  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+  		
+      .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }		 
+        

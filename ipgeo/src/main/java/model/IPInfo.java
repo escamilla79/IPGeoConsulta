@@ -61,6 +61,11 @@ public class IPInfo {
 	public void setTimezone(String timezone) {
 		this.timezone = timezone;
 	}
+	@Override
+	public String toString() {
+		return "IPInfo [id=" + id + ", ip=" + ip + ", city=" + city + ", country=" + country + ", loc=" + loc + ", org="
+				+ org + ", postal=" + postal + ", timezone=" + timezone + "]";
+	}
 	
     
     

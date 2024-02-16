@@ -61,6 +61,8 @@ public class IPGeoDAO implements IPGeoDAOInt {
 	        return null;
 	}
 
+	
+
 	public List<IPInfo> getAll() {
 		List<IPInfo> infoList = new ArrayList<>();
 		String sql = "SELECT * FROM ip_info";
@@ -73,7 +75,7 @@ public class IPGeoDAO implements IPGeoDAOInt {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println("numero de registros :"+infoList.size());
+		
 		return infoList;
 	}
 

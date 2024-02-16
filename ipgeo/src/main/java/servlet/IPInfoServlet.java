@@ -46,10 +46,12 @@ public class IPInfoServlet extends HttpServlet {
 	        
 //	        System.out.println(""+json);
 	        IPInfo ipInfo = new Gson().fromJson(json, IPInfo.class);
-	        //saveIPInfo(ipInfo);
+	    
 	        
 	        if (dao.getByIP(ipInfo.getIp())==null&& ipInfo!=null) {
 				 dao.add(ipInfo);
+
+				 request.setAttribute("data", ipInfo);
 	        }else if(ipInfo==null){
 //	        	System.out.println("No hay info ");
 	        }else {

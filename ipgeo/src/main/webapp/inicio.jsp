@@ -8,6 +8,9 @@
     <meta charset="UTF-8">
     <title>IP Geo</title>
     <link rel="stylesheet" type="text/css" href="static/sheetstyles.css">
+    <!--  js para google map -->
+    <script src="./static/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"></script>
     <!-- Include DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
     <!-- Include jQuery -->
@@ -30,21 +33,37 @@
 </script>
 </head>
 <body>
-   <div class="container">
+ <!--  Busqueda -->
+ <div class="container-hor">
+	   <div class="box-hor">
+		<form action="getIPInfo?action=add" method="get">
+	        <input type="text" id="ipgeo" name="ipgeo" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" placeholder="Ingrese una IP">
+	        <button type="submit" onclick="validarFormato(document.getElementById('ipgeo').value)">Buscar</button>
+	    </form>
+	   </div> 
+	  
+	   <!-- DIV MAP -->
+	   <div class="box-hor" id="map">
+	   		<table >
+		   		<tr><td th:text="${data.loc}"></td></tr>
+		   		
+		   	
+	   		</table>
+	        
+	        <script>
+
+				
+					        // Invoke iniMap function with coordinates
+					        iniMap(${data.loc});
+		        
+		    </script>
+	     
+	    </div>
+  </div>
    
-    <form action="getIPInfo?action=add" method="get">
-        
-        <input type="text" id="ipgeo" name="ipgeo" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" placeholder="Ingrese una IP">
-        <button type="submit" onclick="validarFormato(document.getElementById('ipgeo').value)">Buscar</button>
-    </form>
-   </div> 
    
    <div class="contanier">
-   
       <h2>Listado de IPs Guardadas</h2>
-      
-   
-      
         <table id="dataTable">
             <thead>
                 <tr>
