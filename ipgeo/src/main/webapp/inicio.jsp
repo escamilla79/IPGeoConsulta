@@ -43,7 +43,8 @@
    
       <h2>Listado de IPs Guardadas</h2>
       
-      <input type="text" id="filterInput" placeholder="Type to filter">
+   
+      
         <table id="dataTable">
             <thead>
                 <tr>

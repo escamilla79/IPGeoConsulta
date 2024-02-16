@@ -32,7 +32,7 @@ public class IPInfoServlet extends HttpServlet {
     	IPGeoDAO dao= new IPGeoDAO();
     	
     	 String accion = request.getParameter("action");
-    	 System.out.println("  :::::::: action "+ accion);
+//    	 System.out.println("  :::::::: action "+ accion);
     	
     	if(accion!=null&&accion.equals("eliminar")) {
     		String idEliminar = request.getParameter("id");

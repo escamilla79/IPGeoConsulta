@@ -12,6 +12,7 @@ import util.DBHelper;
 
 public class IPGeoDAO implements IPGeoDAOInt {
 	
+
 	private Connection connection;
 
     public IPGeoDAO() {
