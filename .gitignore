@@ -1,0 +1,13 @@
+
+ipgeo/.classpath
+ipgeo/.DS_Store
+ipgeo/.project
+ipgeo/.settings/.jsdtscope
+*.prefs
+ipgeo/.settings/org.eclipse.wst.common.component
+ipgeo/.settings/org.eclipse.wst.common.project.facet.core.xml
+ipgeo/.settings/org.eclipse.wst.jsdt.ui.superType.container
+ipgeo/src/.DS_Store
+ipgeo/src/main/.DS_Store
+ipgeo/src/test/.DS_Store
+ipgeo/src/main/java/.DS_Store
